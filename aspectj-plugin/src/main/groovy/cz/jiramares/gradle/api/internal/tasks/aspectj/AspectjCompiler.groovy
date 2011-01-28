@@ -4,6 +4,10 @@ import org.gradle.api.internal.tasks.compile.Compiler
 import cz.jiramares.gradle.api.tasks.aspectj.AspectjCompileOptions
 import org.gradle.api.file.FileCollection
 
+/**
+ * 
+ * @author Jiri Mares (jiramares@gmail.com) 
+ */
 interface AspectjCompiler extends Compiler {
    
    AspectjCompileOptions getAspectjCompileOptions()

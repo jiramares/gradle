@@ -7,6 +7,10 @@ import org.gradle.api.internal.tasks.compile.StaleClassCleaner
 import cz.jiramares.gradle.api.tasks.aspectj.AspectjCompileOptions
 import org.gradle.api.file.FileCollection
 
+/**
+ * 
+ * @author Jiri Mares (jiramares@gmail.com) 
+ */
 class IncrementalAspectjCompiler extends IncrementalJavaSourceCompiler implements AspectjJavaJointCompiler {
    protected  TaskOutputsInternal taskOutputs
 

@@ -11,6 +11,10 @@ import org.gradle.api.tasks.util.PatternSet;
 import org.gradle.util.ConfigureUtil;
 import groovy.lang.Closure;
 
+/**
+ * 
+ * @author Jiri Mares (jiramares@gmail.com) 
+ */
 class DefaultAspectjSourceSet implements AspectjSourceSet {
    protected SourceDirectorySet aspectj
    protected UnionFileTree allAspectj

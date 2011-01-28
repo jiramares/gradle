@@ -1,9 +1,8 @@
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
 
-version = '0.0.1'
+version = '0.9.1'
 group = 'cz.jiramares.gradle'
-name = 'aspectj-plugin'
 
 dependencies {
     groovy fileTree(dir: new File(gradleHome, 'lib'), includes: ['**/*.jar'])

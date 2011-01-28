@@ -11,6 +11,10 @@ import org.gradle.api.tasks.WorkResult
 import org.gradle.api.tasks.compile.CompileOptions
 import cz.jiramares.gradle.api.tasks.aspectj.AspectjCompileOptions
 
+/**
+ * 
+ * @author Jiri Mares (jiramares@gmail.com) 
+ */
 class AntAspectjCompiler implements AspectjJavaJointCompiler {
    public static final Logger logger = LoggerFactory.getLogger(AntAspectjCompiler)
 

@@ -4,6 +4,10 @@ import org.gradle.api.tasks.compile.AbstractOptions
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.Optional
 
+/**
+ * 
+ * @author Jiri Mares (jiramares@gmail.com) 
+ */
 class AspectjCompileOptions extends AbstractOptions {
    boolean failOnError = true
    boolean showWeaveInfo = true

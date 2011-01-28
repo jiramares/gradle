@@ -14,6 +14,10 @@ import cz.jiramares.gradle.api.internal.tasks.DefaultAspectjSourceSet
 import cz.jiramares.gradle.api.tasks.AspectjSourceSet
 import cz.jiramares.gradle.api.tasks.aspectj.AspectjCompile
 
+/**
+ * 
+ * @author Jiri Mares (jiramares@gmail.com) 
+ */
 class AspectjBasePlugin implements Plugin {
    public static final ASPECTJASPECTS_CONFIGURATION_NAME = "aspects";
    public static final ASPECTJTOOLS_CONFIGURATION_NAME = "aspectjTools";
