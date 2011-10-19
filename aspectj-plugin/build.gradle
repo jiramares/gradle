@@ -2,7 +2,7 @@ apply plugin: 'groovy'
 apply plugin: 'eclipse'
 
 version = '1.0-milestone-3'
-group = 'cz.jiramares.gradle'
+group = 'cz.jiradesign.gradle'
 
 dependencies {
     groovy fileTree(dir: new File(gradleHome, 'lib'), includes: ['**/*.jar'])
