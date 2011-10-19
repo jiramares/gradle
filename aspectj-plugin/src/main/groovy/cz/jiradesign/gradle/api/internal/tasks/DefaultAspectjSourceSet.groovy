@@ -1,6 +1,6 @@
-package cz.jiramares.gradle.api.internal.tasks
+package cz.jiradesign.gradle.api.internal.tasks
 
-import cz.jiramares.gradle.api.tasks.AspectjSourceSet
+import cz.jiradesign.gradle.api.tasks.AspectjSourceSet
 import org.gradle.api.file.FileTree;
 import org.gradle.api.file.SourceDirectorySet;
 import org.gradle.api.internal.file.UnionFileTree;

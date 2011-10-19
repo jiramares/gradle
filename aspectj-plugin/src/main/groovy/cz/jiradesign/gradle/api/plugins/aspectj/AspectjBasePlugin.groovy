@@ -1,4 +1,4 @@
-package cz.jiramares.gradle.api.plugins.aspectj
+package cz.jiradesign.gradle.api.plugins.aspectj
 
 import org.gradle.api.Action
 import org.gradle.api.Plugin
@@ -7,12 +7,11 @@ import org.gradle.api.file.FileTreeElement
 import org.gradle.api.plugins.JavaBasePlugin
 import org.gradle.api.plugins.JavaPluginConvention
 import org.gradle.api.tasks.compile.Compile
-import org.gradle.plugins.eclipse.EclipseClasspath
 import org.gradle.api.internal.ClassGenerator
 
-import cz.jiramares.gradle.api.internal.tasks.DefaultAspectjSourceSet
-import cz.jiramares.gradle.api.tasks.AspectjSourceSet
-import cz.jiramares.gradle.api.tasks.aspectj.AspectjCompile
+import cz.jiradesign.gradle.api.internal.tasks.DefaultAspectjSourceSet
+import cz.jiradesign.gradle.api.tasks.AspectjSourceSet
+import cz.jiradesign.gradle.api.tasks.aspectj.AspectjCompile
 
 /**
  * 

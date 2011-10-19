@@ -1,4 +1,4 @@
-package cz.jiramares.gradle.api.tasks.aspectj
+package cz.jiradesign.gradle.api.tasks.aspectj
 
 import org.gradle.api.tasks.compile.AbstractOptions
 

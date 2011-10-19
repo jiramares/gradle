@@ -1,4 +1,4 @@
-package cz.jiramares.gradle.api.tasks
+package cz.jiradesign.gradle.api.tasks
 
 import groovy.lang.Closure;
 import org.gradle.api.file.FileTree;

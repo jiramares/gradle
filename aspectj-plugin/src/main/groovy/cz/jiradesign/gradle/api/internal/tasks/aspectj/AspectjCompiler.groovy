@@ -1,7 +1,7 @@
-package cz.jiramares.gradle.api.internal.tasks.aspectj
+package cz.jiradesign.gradle.api.internal.tasks.aspectj
 
 import org.gradle.api.internal.tasks.compile.Compiler
-import cz.jiramares.gradle.api.tasks.aspectj.AspectjCompileOptions
+import cz.jiradesign.gradle.api.tasks.aspectj.AspectjCompileOptions
 import org.gradle.api.file.FileCollection
 
 /**

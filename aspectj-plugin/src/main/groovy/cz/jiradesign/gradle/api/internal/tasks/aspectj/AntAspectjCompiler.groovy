@@ -1,4 +1,4 @@
-package cz.jiramares.gradle.api.internal.tasks.aspectj
+package cz.jiradesign.gradle.api.internal.tasks.aspectj
 
 import org.gradle.api.file.FileCollection
 import org.gradle.api.internal.project.IsolatedAntBuilder
@@ -9,7 +9,7 @@ import org.gradle.api.tasks.util.PatternSet
 
 import org.gradle.api.tasks.WorkResult
 import org.gradle.api.tasks.compile.CompileOptions
-import cz.jiramares.gradle.api.tasks.aspectj.AspectjCompileOptions
+import cz.jiradesign.gradle.api.tasks.aspectj.AspectjCompileOptions
 
 /**
  * 

@@ -1,4 +1,4 @@
-package cz.jiramares.gradle.api.internal.tasks.aspectj
+package cz.jiradesign.gradle.api.internal.tasks.aspectj
 
 import org.gradle.api.internal.tasks.compile.JavaSourceCompiler
 

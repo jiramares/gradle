@@ -1,12 +1,12 @@
-package cz.jiramares.gradle.api.tasks.aspectj
+package cz.jiradesign.gradle.api.tasks.aspectj
 
 import org.gradle.api.tasks.compile.AbstractCompile
 import org.gradle.api.file.FileCollection
 import org.gradle.api.internal.project.IsolatedAntBuilder
 import org.gradle.api.internal.ClassPathRegistry
-import cz.jiramares.gradle.api.internal.tasks.aspectj.AspectjJavaJointCompiler
-import cz.jiramares.gradle.api.internal.tasks.aspectj.IncrementalAspectjCompiler
-import cz.jiramares.gradle.api.internal.tasks.aspectj.AntAspectjCompiler
+import cz.jiradesign.gradle.api.internal.tasks.aspectj.AspectjJavaJointCompiler
+import cz.jiradesign.gradle.api.internal.tasks.aspectj.IncrementalAspectjCompiler
+import cz.jiradesign.gradle.api.internal.tasks.aspectj.AntAspectjCompiler
 import org.gradle.api.tasks.Nested
 import org.gradle.api.tasks.InputFiles
 import org.gradle.api.tasks.Optional

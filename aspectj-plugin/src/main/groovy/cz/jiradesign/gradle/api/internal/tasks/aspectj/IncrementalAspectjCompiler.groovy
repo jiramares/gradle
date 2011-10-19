@@ -1,10 +1,10 @@
-package cz.jiramares.gradle.api.internal.tasks.aspectj
+package cz.jiradesign.gradle.api.internal.tasks.aspectj
 
 import org.gradle.api.internal.tasks.compile.IncrementalJavaSourceCompiler
 import org.gradle.api.internal.TaskOutputsInternal
 import org.gradle.api.internal.tasks.compile.SimpleStaleClassCleaner
 import org.gradle.api.internal.tasks.compile.StaleClassCleaner
-import cz.jiramares.gradle.api.tasks.aspectj.AspectjCompileOptions
+import cz.jiradesign.gradle.api.tasks.aspectj.AspectjCompileOptions
 import org.gradle.api.file.FileCollection
 
 /**

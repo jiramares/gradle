@@ -1,7 +1,7 @@
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
 
-version = '0.9.1'
+version = '1.0-milestone-3'
 group = 'cz.jiramares.gradle'
 
 dependencies {
