@@ -1,7 +1,6 @@
 package cz.jiradesign.gradle.api.tasks
 
 import groovy.lang.Closure;
-import org.gradle.api.file.FileTree;
 import org.gradle.api.file.SourceDirectorySet;
 
 /**
@@ -14,7 +13,7 @@ interface AspectjSourceSet {
    
    AspectjSourceSet aspectj(Closure configureClosure)
    
-   FileTree getAllAspectj()
+   SourceDirectorySet getAllAspectj()
    
    File getNotWeavedClassesDir()
    

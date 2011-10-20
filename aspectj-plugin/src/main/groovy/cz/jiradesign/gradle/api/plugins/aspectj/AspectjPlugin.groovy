@@ -4,6 +4,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
 import org.gradle.plugins.ide.eclipse.GenerateEclipseProject
+import org.gradle.plugins.ide.eclipse.EclipsePlugin
 
 /**
  * The AspectJ plugin extends the Java plugin to add support for aspectj to gradle build system.

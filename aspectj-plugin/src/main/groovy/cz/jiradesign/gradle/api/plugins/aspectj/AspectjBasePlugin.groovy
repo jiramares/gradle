@@ -44,8 +44,8 @@ class AspectjBasePlugin implements Plugin {
             ass.conventionMapping.notWeavedClassesDir = { new File(sourceSet.classesDir.parent, "${sourceSet.name}-not-weaved") }
             sourceSet.convention.plugins.aspectj = ass
             sourceSet.aspectj.srcDir { project.file("src/${sourceSet.name}/aspectj") }
-            sourceSet.allJava.add(sourceSet.aspectj.matching(sourceSet.java.filter))
-            sourceSet.allSource.add(sourceSet.aspectj)
+            sourceSet.allJava.source(sourceSet.aspectj)
+            sourceSet.allSource.source(sourceSet.aspectj)
             sourceSet.resources.filter.exclude { FileTreeElement element -> sourceSet.aspectj.contains(element.file) }
 
             project.tasks.getByName(sourceSet.compileJavaTaskName).conventionMapping.destinationDir = { sourceSet.notWeavedClassesDir }

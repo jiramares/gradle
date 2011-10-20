@@ -3,6 +3,7 @@ package cz.jiradesign.gradle.api.plugins.aspectj
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPlugin
+import org.gradle.plugins.ide.eclipse.GenerateEclipseClasspath
 import org.gradle.plugins.ide.eclipse.GenerateEclipseProject
 
 /**
@@ -12,12 +13,12 @@ import org.gradle.plugins.ide.eclipse.GenerateEclipseProject
 class AspectjEclipsePlugin implements Plugin<Project> {
     
     public void apply(Project project) {
-       configureEclipseProject(project)
-       configureEclipseClasspath(project)
+       configureGenerateEclipseProject(project)
+       configureGenerateEclipseClasspath(project)
     }
     
-    protected void configureEclipseProject(Project project) {
-       project.tasks.withType(EclipseProject) {
+    protected void configureGenerateEclipseProject(Project project) {
+       project.tasks.withType(GenerateEclipseProject) {
           withXml() { xmlProvider->
              def projectDescription = xmlProvider.asNode()
              def xmlparser = new XmlParser()
@@ -35,8 +36,8 @@ class AspectjEclipsePlugin implements Plugin<Project> {
        }
     }
     
-    protected void configureEclipseClasspath(Project project) {
-       project.tasks.withType(EclipseClasspath) {
+    protected void configureGenerateEclipseClasspath(Project project) {
+       project.tasks.withType(GenerateEclipseClasspath) {
           withXml { xmlProvider ->
              def classpath = xmlProvider.asNode()
              def xmlparser = new XmlParser()
