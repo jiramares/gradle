@@ -1,10 +1,11 @@
 apply plugin: 'groovy'
-apply plugin: 'eclipse'
+apply from: 'https://ids/svn/repos/public/gradle/trunk/repositories.gradle'
 
-version = '1.0-milestone-3'
 group = 'cz.jiradesign.gradle'
+version = '2.2'
 
 dependencies {
-    groovy fileTree(dir: new File(gradleHome, 'lib'), includes: ['**/*.jar'])
+    compile localGroovy()
+    compile gradleApi()
 }
 

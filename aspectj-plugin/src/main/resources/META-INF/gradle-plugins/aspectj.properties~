@@ -1,0 +1,2 @@
+implementation-class=cz.jiradesign.gradle.api.plugins.aspectj.AspectjPlugin
+
