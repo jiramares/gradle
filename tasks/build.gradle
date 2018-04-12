@@ -1,0 +1,11 @@
+apply plugin: 'groovy'
+apply from: 'https://ids/svn/repos/public/gradle/trunk/repositories.gradle'
+
+group = 'cz.jiradesign.gradle'
+version = '1.0'
+
+dependencies {
+    compile localGroovy()
+    compile gradleApi()
+}
+
