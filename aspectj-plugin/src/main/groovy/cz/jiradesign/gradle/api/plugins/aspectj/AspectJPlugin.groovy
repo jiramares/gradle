@@ -56,7 +56,7 @@ class AspectJPlugin implements Plugin<Project> {
                 def aspectjDir = project.file("src/${projectSourceSet.name}/aspectj")
                 def aspectjSourceRoots = aspectjDir.exists() ? project.files(aspectjDir) : project.files()
                 
-                project.tasks.create(name: aspectTaskName, overwrite: true, description: "Compiles AspectJ Source for ${projectSourceSet.name} source set", type: Ajc) {
+                project.tasks.create(name: aspectTaskName, overwrite: false, description: "Compiles AspectJ Source for ${projectSourceSet.name} source set", type: Ajc) {
                     sourceSet = projectSourceSet
                     destinationDir = projectSourceSet.java.outputDir
                     aspectpath = project.configurations.findByName(namingConventions.getAspectPathConfigurationName(projectSourceSet))
