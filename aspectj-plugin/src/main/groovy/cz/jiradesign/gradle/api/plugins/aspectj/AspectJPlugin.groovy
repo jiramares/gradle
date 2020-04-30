@@ -7,6 +7,11 @@ import org.gradle.api.Project
 import org.gradle.api.file.FileCollection
 import org.gradle.api.logging.LogLevel
 import org.gradle.api.plugins.JavaPlugin
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.InputFiles
+import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.Internal
+import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.SourceSet
 import org.gradle.api.tasks.TaskAction
 
@@ -35,7 +40,7 @@ class AspectJPlugin implements Plugin<Project> {
 
                 p.dependencies {
                     ajtools "org.aspectj:aspectjtools:${aspectj.version}"
-                    compile "org.aspectj:aspectjrt:${aspectj.version}"
+                    implementation "org.aspectj:aspectjrt:${aspectj.version}"
                 }
             }
         }
@@ -57,7 +62,7 @@ class AspectJPlugin implements Plugin<Project> {
                 def aspectjSourceRoots = aspectjDir.exists() ? project.files(aspectjDir) : project.files()
                 
                 project.tasks.create(name: aspectTaskName, overwrite: false, description: "Compiles AspectJ Source for ${projectSourceSet.name} source set", type: Ajc) {
-                    sourceSet = projectSourceSet
+                    sourceSet = projectSourceSet.compileClasspath
                     destinationDir = projectSourceSet.java.outputDir
                     aspectpath = project.configurations.findByName(namingConventions.getAspectPathConfigurationName(projectSourceSet))
                     inpath = project.files(projectSourceSet.java.outputDir)
@@ -130,29 +135,29 @@ class AspectJPlugin implements Plugin<Project> {
 
 class Ajc extends JavaExec {
 
-    SourceSet sourceSet
+    @InputFiles FileCollection sourceSet
 
-    File destinationDir
+    @OutputDirectory File destinationDir
 
-    FileCollection aspectpath
-    FileCollection inpath
-    FileCollection sourceRoots
+    @InputFiles FileCollection aspectpath
+    @Internal FileCollection inpath
+    @InputFiles FileCollection sourceRoots
 
     // ignore or warning
-    String xlint = 'ignore'
+    @Input String xlint = 'ignore'
 
     Ajc() {
         logging.captureStandardOutput(LogLevel.INFO)       
     }
 
-    public void exec() {
+    @TaskAction public void exec() {
         logger.info("Running ajc ...")
 
         main = "org.aspectj.tools.ajc.Main"
         classpath = project.configurations.ajtools
         args = [ "-inpath", inpath.asPath,
                  "-sourceroots", sourceRoots.asPath, 
-                 "-classpath", sourceSet.compileClasspath.asPath,
+                 "-classpath", sourceSet.asPath,
                  "-d", destinationDir,
                  "-target", project.convention.plugins.java.targetCompatibility,
                  "-source", project.convention.plugins.java.targetCompatibility,
